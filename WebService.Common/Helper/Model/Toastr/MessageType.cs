@@ -1,4 +1,4 @@
-﻿namespace WebService.Common.Models.Toastr
+﻿namespace WebService.Common.Helper.Model.Toastr
 {
     public enum MessageType
     {

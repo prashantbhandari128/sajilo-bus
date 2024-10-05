@@ -70,8 +70,5 @@ namespace WebService.DataAccess.Repository.Interface
 
         // Returns an IQueryable of entities of type T from the database.
         IQueryable<T> GetQueryable();
-
-        // Returns an IQueryable of entities of type T from the database asynchronously.
-        Task<IQueryable<T>> GetQueryableAsync();
     }
 }

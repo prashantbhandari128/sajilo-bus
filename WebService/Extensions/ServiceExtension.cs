@@ -28,8 +28,10 @@ namespace WebService.Extensions
         //-----------------------------[ Inject Helper Here ]-----------------------------------
         public static void AddHelpers(this IServiceCollection services)
         {
+            services.AddTransient<ICalendarHelper, CalendarHelper>();
             services.AddTransient<IConsoleHelper, ConsoleHelper>();
             services.AddTransient<IPaginationRedirectHelper, PaginationRedirectHelper>();
+            services.AddTransient<IPaginationHelper, PaginationHelper>();
             services.AddTransient<IToastrHelper, ToastrHelper>();
         }
         //--------------------------------------------------------------------------------------
@@ -39,6 +41,7 @@ namespace WebService.Extensions
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<ILocationRepository, LocationRepository>();
         }
         //--------------------------------------------------------------------------------------
 

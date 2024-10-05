@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebService.Common.Models.Toastr;
+using WebService.Common.Helper.Model.Toastr;
 
 namespace WebService.Common.Helper.Interface
 {

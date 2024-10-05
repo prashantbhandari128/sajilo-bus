@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebService.Common.Helper.Interface;
-using WebService.Common.Models.Toastr;
+using WebService.Common.Helper.Model.Toastr;
 
 namespace WebService.Areas.Admin.Controllers
 {
@@ -16,7 +16,7 @@ namespace WebService.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            _toastrHelper.SendMessage(this, "SajiloBus", "Welcome to Admin Dashboard", MessageType.Info);
+            _toastrHelper.SendMessage(this, "SajiloBus", "👋 Welcome, Admin!", MessageType.Info);
             return View();
         }
     }

@@ -20,6 +20,7 @@ namespace WebService.DataAccess.Context
 
         //---------------[ Set Here ]----------------
         public DbSet<Book> Books { get; set; }
+        public DbSet<Location> Locations { get; set; }
         //-------------------------------------------
     }
 }

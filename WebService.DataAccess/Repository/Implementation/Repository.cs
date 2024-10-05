@@ -83,8 +83,6 @@ namespace WebService.DataAccess.Repository.Implementation
 
         public IQueryable<T> GetQueryable() => _context.Set<T>().AsQueryable();
 
-        public async Task<IQueryable<T>> GetQueryableAsync() => await Task.FromResult(_context.Set<T>().AsQueryable());
-
         public void Dispose()
         {
             Dispose(true);

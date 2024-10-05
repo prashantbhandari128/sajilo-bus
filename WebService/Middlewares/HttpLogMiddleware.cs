@@ -27,7 +27,7 @@ namespace WebService.Middlewares
                 // Call the next middleware in the pipeline
                 await _next(context);
 
-                LogHttpInfo($"[+] Outgoing Response: {context.Response.StatusCode}");
+                LogHttpInfo($"[+] Outgoing Response Code: {context.Response.StatusCode}");
             }
             finally
             {

@@ -50,4 +50,6 @@ app.MapControllerRoute(
 
 app.UseHttpLog();
 
+app.UseConcurrentRequest(2);
+
 app.Run();

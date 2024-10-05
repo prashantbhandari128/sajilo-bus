@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebService.Common.Helper.Interface;
-using WebService.Common.Value;
 
 namespace WebService.Common.Helper.Implementation
 {
     public class PaginationRedirectHelper : IPaginationRedirectHelper
     {
-        public RedirectResult RedirectToPage(string area, string controller, string action, string? search, int pageindex = DefaultPageValue.DEFAULT_PAGEINDEX, int pagesize = DefaultPageValue.DEFAULT_PAGESIZE)
+        //-------------[ Contants ]-------------
+        public const int DEFAULT_PAGEINDEX = 1;
+        public const int DEFAULT_PAGESIZE = 5;
+        //--------------------------------------
+
+        public RedirectResult RedirectToPage(string area, string controller, string action, string? search, int pageindex, int pagesize)
         {
             if (string.IsNullOrEmpty(search))
             {

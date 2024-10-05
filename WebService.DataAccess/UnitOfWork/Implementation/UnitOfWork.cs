@@ -18,6 +18,7 @@ namespace WebService.DataAccess.UnitOfWork.Implementation
 
         //-----------[ Add repositories here ]----------
         public IBookRepository Books { get; }
+        public ILocationRepository Locations { get; }
         //----------------------------------------------
 
         public UnitOfWork(ApplicationDbContext context)
@@ -26,6 +27,7 @@ namespace WebService.DataAccess.UnitOfWork.Implementation
 
             //----------[ Initialize repositories here ]----------
             Books = new BookRepository(_context);
+            Locations = new LocationRepository(_context);
             //----------------------------------------------------
         }
 
@@ -34,8 +36,6 @@ namespace WebService.DataAccess.UnitOfWork.Implementation
         public async Task<int> CompleteAsync() => await _context.SaveChangesAsync();
 
         public IDbContextTransaction BeginTransaction() => _context.Database.BeginTransaction();
-
-        public async Task<IDbContextTransaction> BeginTransactionAsync() => await _context.Database.BeginTransactionAsync();
 
         protected virtual void Dispose(bool disposing)
         {

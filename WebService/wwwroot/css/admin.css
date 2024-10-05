@@ -45,7 +45,6 @@ body {
 }
 
 /*--------[Scrollbar]--------*/
-
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -66,5 +65,4 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: #90EE90;
     }
-
 /*---------------------------*/

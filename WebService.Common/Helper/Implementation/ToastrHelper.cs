@@ -1,8 +1,7 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebService.Common.Helper.Interface;
-using WebService.Common.Models.Toastr;
+using WebService.Common.Helper.Model.Toastr;
 
 namespace WebService.Common.Helper.Implementation
 {

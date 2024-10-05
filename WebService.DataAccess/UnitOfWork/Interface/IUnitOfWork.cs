@@ -11,6 +11,7 @@ namespace WebService.DataAccess.UnitOfWork.Interface
     {
         // Repositories
         IBookRepository Books { get; }
+        ILocationRepository Locations { get; }
 
         // Save changes
         int Complete();
@@ -18,6 +19,5 @@ namespace WebService.DataAccess.UnitOfWork.Interface
 
         // Transaction
         IDbContextTransaction BeginTransaction();
-        Task<IDbContextTransaction> BeginTransactionAsync();
     }
 }
